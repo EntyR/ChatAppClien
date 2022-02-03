@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/registerFragment">
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.enty.test.fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_allUsersFragment"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_userInfo"
+            app:destination="@id/userInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/allUsersFragment"
+        android:name="com.enty.test.fragments.AllUsersFragment"
+        android:label="fragment_all_users"
+        tools:layout="@layout/fragment_all_users" >
+        <action
+            android:id="@+id/action_allUsersFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+        <action
+            android:id="@+id/action_allUsersFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_allUsersFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_allUsersFragment_to_userInfo"
+            app:destination="@id/userInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.enty.test.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_allUsersFragment"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_userInfo"
+            app:destination="@id/userInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="com.enty.test.fragments.DialogFragment"
+        android:label="fragment_dialog"
+        tools:layout="@layout/fragment_dialog" >
+        <action
+            android:id="@+id/action_dialogFragment_to_allUsersFragment"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_dialogFragment_to_allUsersFragment2"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_dialogFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.enty.test.fragments.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_postFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_allUsersFragment"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_userInfo"
+            app:destination="@id/userInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.enty.test.fragments.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_allUsersFragment"
+            app:destination="@id/allUsersFragment" />
+        <action
+            android:id="@+id/action_contactFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+        <action
+            android:id="@+id/action_contactFragment_to_userInfo"
+            app:destination="@id/userInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfo"
+        android:name="com.enty.test.fragments.UserInfo"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
+</navigation>
